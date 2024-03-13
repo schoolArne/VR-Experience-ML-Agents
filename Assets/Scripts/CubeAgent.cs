@@ -20,10 +20,10 @@ public class CubeAgent : Agent
             this.transform.localRotation = Quaternion.identity;
         }
         // verplaats de target naar een nieuwe willekeurige locatie
-        Target.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
+        Target.localPosition = new Vector3(UnityEngine.Random.value * 8 - 4, 0.5f, UnityEngine.Random.value * 8 - 4);
     }
 
-    CollectObservations(VectorSensor sensor)
+    public override void CollectObservations(VectorSensor sensor)
     {
         // Target en Agent posities
         sensor.AddObservation(Target.localPosition);
