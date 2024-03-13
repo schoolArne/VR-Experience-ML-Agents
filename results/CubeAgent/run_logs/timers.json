@@ -2,39 +2,39 @@
     "name": "root",
     "metadata": {
         "timer_format_version": "0.1.0",
-        "start_time_seconds": "1710328312",
+        "start_time_seconds": "1710328572",
         "python_version": "3.9.18 (main, Sep 11 2023, 14:09:26) [MSC v.1916 64 bit (AMD64)]",
-        "command_line_arguments": "C:\\Users\\Acer\\anaconda3\\envs\\MLAgents\\Scripts\\mlagents-learn config/CubeAgent.yaml --run-id=CubeAgent",
+        "command_line_arguments": "C:\\Users\\Acer\\anaconda3\\envs\\MLAgents\\Scripts\\mlagents-learn --force config/CubeAgent.yaml --run-id=CubeAgent",
         "mlagents_version": "0.30.0",
         "mlagents_envs_version": "0.30.0",
         "communication_protocol_version": "1.5.0",
         "pytorch_version": "1.7.1+cpu",
         "numpy_version": "1.21.2",
-        "end_time_seconds": "1710328390"
+        "end_time_seconds": "1710328640"
     },
-    "total": 78.1064664,
+    "total": 67.7155133,
     "count": 1,
-    "self": 0.03055920000001322,
+    "self": 0.023718999999999824,
     "children": {
         "run_training.setup": {
-            "total": 0.14908240000000017,
+            "total": 0.13855039999999996,
             "count": 1,
-            "self": 0.14908240000000017
+            "self": 0.13855039999999996
         },
         "TrainerController.start_learning": {
-            "total": 77.92682479999999,
+            "total": 67.5532439,
             "count": 1,
-            "self": 0.00029889999998999883,
+            "self": 0.00014980000000264226,
             "children": {
                 "TrainerController._reset_env": {
-                    "total": 77.9264832,
+                    "total": 67.55305229999999,
                     "count": 1,
-                    "self": 77.9264832
+                    "self": 67.55305229999999
                 },
                 "TrainerController._save_models": {
-                    "total": 4.269999999451102e-05,
+                    "total": 4.180000000530981e-05,
                     "count": 1,
-                    "self": 4.269999999451102e-05
+                    "self": 4.180000000530981e-05
                 }
             }
         }
