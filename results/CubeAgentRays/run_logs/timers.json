@@ -1,0 +1,54 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1710934338",
+        "python_version": "3.9.18 (main, Sep 11 2023, 14:09:26) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Acer\\anaconda3\\envs\\MLAgents\\Scripts\\mlagents-learn --resume config/CubeAgent.yaml --run-id=CubeAgentRays",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1710934350"
+    },
+    "total": 12.1641247,
+    "count": 1,
+    "self": 0.02563319999999969,
+    "children": {
+        "run_training.setup": {
+            "total": 0.1558636,
+            "count": 1,
+            "self": 0.1558636
+        },
+        "TrainerController.start_learning": {
+            "total": 11.9826279,
+            "count": 1,
+            "self": 0.000214600000001397,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 11.7023546,
+                    "count": 1,
+                    "self": 11.7023546
+                },
+                "trainer_threads": {
+                    "total": 2.600000000185787e-06,
+                    "count": 1,
+                    "self": 2.600000000185787e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 0.2800560999999995,
+                    "count": 1,
+                    "self": 0.03038349999999923,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.24967260000000024,
+                            "count": 1,
+                            "self": 0.24967260000000024
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
