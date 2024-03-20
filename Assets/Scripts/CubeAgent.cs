@@ -17,8 +17,8 @@ public class CubeAgent : Agent
         if (this.transform.localPosition.y < 0)
         {
             this.transform.localPosition = new Vector3(0, 0.5f, 0);
-            this.transform.localRotation = Quaternion.identity;
         }
+        this.transform.localRotation = Quaternion.identity;
         // verplaats de target naar een nieuwe willekeurige locatie
         Target.localPosition = new Vector3(UnityEngine.Random.value * 8 - 4, 0.5f, UnityEngine.Random.value * 8 - 4);
     }
