@@ -10,6 +10,7 @@ public class CubeAgent : Agent
 {
     public Transform Target;
     public float speedMultiplier = 0.1f;
+    public float rotationMultiplier = 5;
 
     public override void OnEpisodeBegin()
     {
@@ -33,9 +34,9 @@ public class CubeAgent : Agent
     {
         // Acties, size = 2
         Vector3 controlSignal = Vector3.zero;
-        controlSignal.x = actionBuffers.ContinuousActions[0];
-        controlSignal.z = actionBuffers.ContinuousActions[1];
+        controlSignal.z = actionBuffers.ContinuousActions[0];
         transform.Translate(controlSignal * speedMultiplier);
+        transform.Rotate(0.0f, rotationMultiplier * actionBuffers.ContinuousActions[1], 0.0f);
 
         // Rewards
         float distanceToTarget = Vector3.Distance(this.transform.localPosition, Target.localPosition);
