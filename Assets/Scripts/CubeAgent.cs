@@ -53,8 +53,10 @@ public class CubeAgent : Agent
         // Target reached
         if (distanceToTarget < 1.42f)
         {
-            UnityEngine.Debug.Log("target reached");
-            SetReward(0.2f);
+            if(!this.targetReached)
+            {
+                SetReward(0.2f);
+            }            
             this.targetReached = true;
         }
         else if (this.transform.localPosition.y < 0)
