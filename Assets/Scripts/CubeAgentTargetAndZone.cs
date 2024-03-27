@@ -6,6 +6,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using System;
+using System.Security.Cryptography;
 
 public class CubeAgentChallenge : Agent
 {

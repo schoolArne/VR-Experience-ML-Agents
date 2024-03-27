@@ -5,12 +5,16 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using System;
+using System.Diagnostics;
 
 public class CubeAgent : Agent
 {
     public Transform Target;
+    public Transform ZoneTarget;
     public float speedMultiplier = 0.1f;
     public float rotationMultiplier = 5;
+    private bool targetReached = false;
+    private float zoneHeight;
 
     public override void OnEpisodeBegin()
     {
@@ -19,6 +23,10 @@ public class CubeAgent : Agent
         {
             this.transform.localPosition = new Vector3(0, 0.5f, 0);
         }
+        // reset target reached flag
+        this.targetReached = false;
+        // set zone height
+        this.zoneHeight = ZoneTarget.localPosition.y;
         this.transform.localRotation = Quaternion.identity;
         // verplaats de target naar een nieuwe willekeurige locatie
         Target.localPosition = new Vector3(UnityEngine.Random.value * 8 - 4, 0.5f, UnityEngine.Random.value * 8 - 4);
@@ -28,6 +36,7 @@ public class CubeAgent : Agent
     {
         // Target en Agent posities
         sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(this.ZoneTarget.localPosition);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
@@ -44,14 +53,24 @@ public class CubeAgent : Agent
         // Target reached
         if (distanceToTarget < 1.42f)
         {
-            SetReward(1.0f);
-            EndEpisode();
+            UnityEngine.Debug.Log("target reached");
+            SetReward(0.2f);
+            this.targetReached = true;
         }
-
-        // Fallen off the platform?
         else if (this.transform.localPosition.y < 0)
         {
             EndEpisode();
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == ZoneTarget.gameObject)
+        {
+            if (targetReached)
+            {
+                SetReward(0.8f);
+                EndEpisode();
+            }
         }
     }
     public override void Heuristic(in ActionBuffers actionsOut)
