@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Model: {fileID: 5022602860645237092, guid: 8e4ba59d2f00add47a66183660431885, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: CubeAgent
+  m_BehaviorName: CubeAgentZone
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
