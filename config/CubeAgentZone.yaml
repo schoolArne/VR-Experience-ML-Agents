@@ -18,7 +18,7 @@ behaviors:
       num_layers: 2
     reward_signals:
       extrinsic:
-        gamma: 0.85
+        gamma: 0.9
         strength: 1.0
     max_steps: 50000
     time_horizon: 64
