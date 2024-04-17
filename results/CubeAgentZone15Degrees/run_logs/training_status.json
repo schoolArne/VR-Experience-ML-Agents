@@ -2,22 +2,22 @@
     "CubeAgentZone": {
         "checkpoints": [
             {
-                "steps": 50005,
-                "file_path": "results\\CubeAgentZone15Degrees\\CubeAgentZone\\CubeAgentZone-50005.onnx",
-                "reward": null,
-                "creation_time": 1713343090.0894387,
+                "steps": 50007,
+                "file_path": "results\\CubeAgentZone15Degrees\\CubeAgentZone\\CubeAgentZone-50007.onnx",
+                "reward": 0.0,
+                "creation_time": 1713349402.1592236,
                 "auxillary_file_paths": [
-                    "results\\CubeAgentZone15Degrees\\CubeAgentZone\\CubeAgentZone-50005.pt"
+                    "results\\CubeAgentZone15Degrees\\CubeAgentZone\\CubeAgentZone-50007.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 50005,
+            "steps": 50007,
             "file_path": "results\\CubeAgentZone15Degrees\\CubeAgentZone.onnx",
-            "reward": null,
-            "creation_time": 1713343090.0894387,
+            "reward": 0.0,
+            "creation_time": 1713349402.1592236,
             "auxillary_file_paths": [
-                "results\\CubeAgentZone15Degrees\\CubeAgentZone\\CubeAgentZone-50005.pt"
+                "results\\CubeAgentZone15Degrees\\CubeAgentZone\\CubeAgentZone-50007.pt"
             ]
         }
     },
