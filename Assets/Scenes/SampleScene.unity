@@ -375,7 +375,7 @@ MonoBehaviour:
   m_SensorName: RayPerceptionSensor
   m_DetectableTags: []
   m_RaysPerDirection: 10
-  m_MaxRayDegrees: 45
+  m_MaxRayDegrees: 60
   m_SphereCastRadius: 0.25
   m_RayLength: 15
   m_RayLayerMask:
